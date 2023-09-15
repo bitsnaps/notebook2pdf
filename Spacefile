@@ -1,0 +1,19 @@
+# Spacefile Docs: https://go.deta.dev/docs/spacefile/v0
+v: 0
+micros:
+  - name: SvgToTxt
+    primary: true
+    src: ./
+    engine: python3.9
+    run: uvicorn main:app
+    public_routes:
+      - "/*"
+#    presets:
+#      env:
+#        - name: DATASETS_KEY
+#          description: Key access to datasets
+#          default: "YOUR_DATASETS_KEY"
+  - name: devMode
+    src: ./
+    engine: python3.9
+    dev: uvicorn main:app --reload --host 0.0.0.0

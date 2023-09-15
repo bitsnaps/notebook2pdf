@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+deta
+python-multipart
+lxml
+pyppeteer
+nbconvert[webpdf]
+nbconvert[qtpdf]
