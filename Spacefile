@@ -1,10 +1,14 @@
 # Spacefile Docs: https://go.deta.dev/docs/spacefile/v0
 v: 0
 micros:
-  - name: SvgToTxt
+  - name: Notebook2PDF
     primary: true
     src: ./
     engine: python3.9
+    commands:
+      - apt-get update
+      - apt-get install pandoc texlive texlive-xetex texlive-latex-extra texlive-fonts-recommended texlive-plain-generic -yq
+      - pip install -r requirements.txt
     run: uvicorn main:app
     public_routes:
       - "/*"

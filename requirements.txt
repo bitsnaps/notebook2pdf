@@ -6,3 +6,4 @@ lxml
 pyppeteer
 nbconvert[webpdf]
 nbconvert[qtpdf]
+pandoc
