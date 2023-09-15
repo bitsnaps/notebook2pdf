@@ -7,8 +7,7 @@ micros:
     engine: python3.9
     commands:
       - apt-get update
-      - DEBIAN_FRONTEND=noninteractive apt-get install -yq tzdata
-      - DEBIAN_FRONTEND=noninteractive apt-get install -yq pandoc texlive texlive-xetex
+      - DEBIAN_FRONTEND=noninteractive apt-get install -yq pandoc texlive-latex-base
       - pip install -r requirements.txt
     run: uvicorn main:app
     public_routes:
