@@ -92,6 +92,14 @@
       height: 500px;
     }
   }
+  footer {
+     position: fixed;
+     left: 0;
+     bottom: 0;
+     width: 100%;
+     color: white;
+     text-align: center;
+  }
     </style>
 
 </head>
@@ -105,8 +113,26 @@
       <input type="file" id="file" name="file">
       <input type="submit" value="Send">
     </form>
+    <p>Please wait until you are prompted to download the PDF file, typically, this process takes less than 1 minute.</p>
+    <p>Note: Files will be deleted in 5 minutes.</p>
     
+  <footer>
+    <p>
+      <a href="https://github.com/bitsnaps/notebook2pdf">GitHub</a>
+      <span>&nbsp;</span>
+      <span>&copy; <span id="year"></span> Ibrahim.H</span>
+    </p>
+  </footer>
+
   </div>
 
+<script>
+  document.onload = setYear();
+
+  function setYear() {
+    var spanYear = document.getElementById('year');
+    spanYear.innerHTML = new Date().getFullYear();
+  }
+</script>
   </body>
 </html>
