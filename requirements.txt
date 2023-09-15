@@ -4,6 +4,6 @@ uvicorn[standard]
 python-multipart
 lxml
 # pyppeteer
-nbconvert
-# nbconvert[webpdf]
+# nbconvert
+nbconvert[webpdf]
 #nbconvert[qtpdf]
