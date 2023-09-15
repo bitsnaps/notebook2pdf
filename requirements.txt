@@ -1,8 +1,9 @@
 fastapi
 uvicorn[standard]
-deta
+# deta
 python-multipart
 lxml
-pyppeteer
-nbconvert[webpdf]
-nbconvert[qtpdf]
+# pyppeteer
+nbconvert
+# nbconvert[webpdf]
+#nbconvert[qtpdf]
