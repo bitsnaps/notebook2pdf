@@ -154,3 +154,4 @@ cython_debug/
 # specific files in this demo
 *.ipynb
 *.pdf
+.aider*
