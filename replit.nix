@@ -1,5 +1,6 @@
 { pkgs }: {
   deps = [
+       pkgs.python39Packages.pip
        pkgs.pandoc
        pkgs.texlive-core
        pkgs.texlive-xetex
