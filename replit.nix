@@ -1,10 +1,13 @@
 { pkgs }: {
-  deps = [
-       pkgs.python39Packages.pip
-       pkgs.pandoc
-       pkgs.texlive-core
-       pkgs.texlive-xetex
-       pkgs.texlive-fontsrecommended
-       pkgs.texlive-genericrecommended
-  ];
+    deps = [
+        pkgs.unzip
+        pkgs.chromium
+        pkgs.nodejs-18_x
+        pkgs.sudo
+        pkgs.unixtools.netstat
+        pkgs.deno
+    ];
+    env = {
+      NIXPKGS_ALLOW_INSECURE="1";
+    };
 }

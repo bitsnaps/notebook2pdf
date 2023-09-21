@@ -1,9 +1,0 @@
-fastapi
-uvicorn[standard]
-# deta
-python-multipart
-lxml
-# pyppeteer
-# nbconvert
-nbconvert[webpdf]
-#nbconvert[qtpdf]

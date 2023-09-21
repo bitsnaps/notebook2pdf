@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -108,13 +109,14 @@
   <div id="app">
     <h1>Notebook (*.ipynb) to PDF</h1>
 
-    <form method="post" enctype='multipart/form-data' action="/upload">
-      <label for="file">Upload File:</label>
-      <input type="file" id="file" name="file">
-      <input type="submit" value="Send">
+    <form id="uploadForm" method="POST" enctype='multipart/form-data' action="/upload">
+      <label for="file">Upload a Notebook file:</label>
+      <input type="file" id="notebook" name="notebook" accept=".ipynb">
+      <input type="submit" value="Convert to PDF">
     </form>
-    <p>Please wait until you are prompted to download the PDF file, typically, this process takes less than 1 minute.</p>
-    <p>Note: Files will be deleted in 5 minutes.</p>
+
+    <p>Please wait until you are prompted to preview or download the PDF or preview a rendered HTML file, typically, this process takes less than 1 minute.</p>
+    <p>Note: All files will be deleted from a temporary directory.</p>
     
   <footer>
     <p>

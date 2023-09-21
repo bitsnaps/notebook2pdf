@@ -2,22 +2,22 @@
 v: 0
 micros:
   - name: Notebook2PDF
-    primary: true
     src: ./
-    engine: python3.9
+    engine: custom
     commands:
+      - DEBIAN_FRONTEND=noninteractive apt-get install software-properties-common -yq
+      - add-apt-repository ppa:canonical-chromium-builds/stage
       - apt-get update
-      - DEBIAN_FRONTEND=noninteractive apt-get install -yq pandoc texlive-latex-base texlive-xetex texlive-fonts-recommended texlive-generic-recommended texlive-latex-extra
-      - pip install -r requirements.txt
-    run: uvicorn main:app
-    public_routes:
-      - "/*"
-#    presets:
-#      env:
-#        - name: DATASETS_KEY
-#          description: Key access to datasets
-#          default: "YOUR_DATASETS_KEY"
-  - name: devMode
-    src: ./
-    engine: python3.9
-    dev: uvicorn main:app --reload --host 0.0.0.0
+      - DEBIAN_FRONTEND=noninteractive apt-get install chromium-browser  -yq
+      - DEBIAN_FRONTEND=noninteractive apt-get install -qy unzip
+      - curl -fsSL https://deno.land/x/install/install.sh | sh
+      - $HOME/.deno/bin/deno compile --unstable --output main --allow-all index.ts
+      - chmod +x main
+    primary: true
+    run: ./main
+    dev: deno run --allow-all --unstable index.ts
+    presets:
+      env:
+        - name: DENO_DIR
+          description: Deno configuration directory (do not change /tmp)
+          default: /tmp/deno_dir

@@ -158,3 +158,17 @@ cython_debug/
 
 # Replit Cloud IDE
 .replit
+
+# specific files in this demo
+# system config
+.config
+
+# deno files
+.deno
+lock.json
+
+# test files
+tests/
+
+# binary
+main
