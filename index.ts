@@ -63,7 +63,7 @@ const handler = async (req: Request) => {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/xcode.min.css" crossorigin="anonymous">
 <style>
     div.nb-notebook {
-      margin: 5px 45px;
+      margin: 5px 65px;
     }
     p.nb-title {
         text-align: center;
@@ -78,6 +78,7 @@ const handler = async (req: Request) => {
     }
     @media print {
      body { font-family: georgia, times, serif; }
+     div.nb-notebook { margin: 5px 15px; }
     }
 </style>
   </head>
